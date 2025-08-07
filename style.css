@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+  --blue-600: hsl(185, 75%, 39%);
+  --navy-950: hsl(229, 23%, 23%);
+  --gray-500: hsl(227, 10%, 46%);
+  --gray-100: hsl(225, 10%, 92%);
+
+  --ff-html: "Kumbh Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box
+}
+
+html {
+  font-family: var(--ff-html);
+  color: var(--navy-950);
+  font-size: 18px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1
+}
+
+img, svg, picture {
+  display: block
+}
+
+ul, ol {
+  list-style: none
+}
+
+/* Contents */
+.profile-card {
+  background: white;
+  border-radius: 15px;
+
+  width: min(314px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.profile-card-header {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 52px;
+}
+
+.profile-card-header img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-card-avatar-picture {
+  background: white;
+  position: absolute;
+  padding: .22rem;
+  border-radius: 100%;
+  width: fit-content;
+  height: fit-content;
+  transform: translateY(52px);
+
+  & img {
+    border-radius: 100%;
+  }
+}
+
+.profile-card-user {
+  padding-block: 1.2rem;
+  text-align: center;
+}
+
+.profile-card-user-name {
+  margin-bottom: .5rem;
+
+  & span {
+    color: var(--gray-500);
+    font-weight: 500;
+  }
+}
+
+.profile-card-user-location {
+  color: var(--gray-500);
+  font-size: .8rem
+}
+
+.profile-card-user-name,
+.profile-card-data-list {
+  font-size: 1rem;
+}
+
+.profile-card-footer {
+  border-top: 1px solid var(--gray-100);
+  padding-block: 1.2rem;
+  padding-inline: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card-data-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.profile-card-data-list li {
+  text-align: center;
+}
+
+.profile-card-data-list li span {
+  margin-top: .1rem;
+  display: block;
+  font-size: .6rem;
+  color: var(--gray-500);
+  letter-spacing: .07rem
+}
+
+.bg-pattern-top,
+.bg-pattern-bottom {
+  position: absolute;
+  z-index: -1;
+  width: 978px;
+  height: 978px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bg-pattern-top {
+  margin-top: -52rem;
+  margin-left: -52rem
+}
+
+.bg-pattern-bottom {
+  margin-bottom: -52rem;
+  margin-right: -52rem
+}
